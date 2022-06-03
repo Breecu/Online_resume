@@ -1,21 +1,55 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 {% block content %}
-<h1 align="center">Notes</h1>>
-<ul class="list-group list-group-flush" id="notes">
-        {% for note in user.notes %}
-        <li class="list-group-item">
-                {{ note.data }}
-                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-                        <span aria-hidden="true">&times;</span>>        
-                </button>>
-                </li>>
-        {% endfor %}
-</ul>>
-<form method="POST"> 
-        <textarea name="note" id="note" class="form-control"></textarea>>
-        <br />
-        <div align="center">
-                <button type="submit" class="btn btn-primary">Add Note</button>>        
-        </div>>
-</form>>
-        {% endblock %}
+<style>
+h1{
+        color:black;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+    }
+h2{
+        text-align: left;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+}
+
+p{
+        text-align: left;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+}
+</style>
+
+<h1>RESUME</h1>
+<h2>BRAYAN ORTIZ</h2>
+<p>1157 trapper ln. Pocono Summit PA 18346|bortiz1998@gmail.com|570-972-5907</p>
+<h1>PROFILE</h1>
+<p>Computer scientist with developed skills necessary to deliver client satisfaction through personable leadership. A creative problem-solver with experience adapting to achieve goals and excellent in working with teams to complete projects to their full potential while responding to and implementing feedback. Hungry to learn and to develop new skill sets in the field of computer science.</p>
+<h1>SKILLS & ABILITIES</h1>
+<p>Languages: Java/C/Python/HTML/CSS/JavaScript, Version Control: Git, RDBMS: MySQL/PostgresSQL, IDEs: Visual Studio, Eclipse, JGrasp, Excellent problem-solving abilities</p>
+<h1>EXPERIENCE</h1>
+<h2>Online Resume web app: 2021</h2>
+<p>-Web app that displays my resume in the home screen but only allows users who have signed up and logged in to access the home page. Pop up notifications are implemented to easily navigate through the web app. Sign up error pop up notifications occur when sign requirements are not met. Successful login notifications pop up as well.</p>
+<p>Live website: <a href="http://breecu.pythonanywhere.com">http://breecu.pythonanywhere.com</a></p>
+<p>GitHub: <a href="https://github.com/Breecu/Online_resume">https://github.com/Breecu/Online_resume</a></p>
+<p>Technologies used: Python, Flask, HTML, SQLAlchemy</p>
+<h2>Gomoku: 2019</h2>
+<p>-Server/client gomoku game project made to run multiple games concurrently using semaphores and threads in C. This was a team project during my junior year in college where my colleague and I had to not only complete the project but exercise team project building practices such as required weekly logged team meetings and required usage of git for version control.</p>
+<p>GitHub: <a href="https://github.com/Breecu/Gomoku">https://github.com/Breecu/Gomoku</a></p>
+<p>Technologies used: C, PostgresSQL</p>
+<h2>Personal Web app: 2022</h2>
+<p>-Web application used as a personal web site and made to exercise CSS and web development skills. </p>
+<p>GitHub: <a href="https://github.com/Breecu/CSS_webapp">https://github.com/Breecu/CSS_webapp</a></p>
+<p>Technologies used: HTML, CSS, Javascript</p>
+<h2>Senior Project: 2020</h1>
+<p>-Online ecommerce price comparison web application. Simple web application that lets user input product name and will search through an ecommerce site for related product as well as others to compare prices of each.</p>
+<p>GitHub: <a href="https://github.com/Breecu/Ecommerce_compare_app">https://github.com/Breecu/Ecommerce_compare_app</a></p>
+<p>Technologies used: Python, Flask, Beautifulsoup</p>
+<h1>EDUCATION</h1>
+<h2>The University of Scranton</h2>
+<p>Bachelor’s degree: Computer Science: 2020</p>
+<h1>COMMUNITY SERVICE</h1>
+<h2>Active member of the most holy trinity parish: 2012-present</h2>
+<p>-Participating as an alter server and at parish events</p>
+
+{% endblock %}
